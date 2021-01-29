@@ -3,9 +3,9 @@ const { join } = require("path");
 
 const assetRoute = Router();
 
-assetRoute.get("/images", static(join(__dirname, "/images")));
-assetRoute.get("/css", static(join(__dirname, "/css")));
-assetRoute.get("/etc", static(join(__dirname, "/etc")));
-assetRoute.get("/js", static(join(__dirname, "/js")));
+assetRoute.use("/images", static(join(__dirname, "/images")));
+assetRoute.use("/css", static(join(__dirname, "/css")));
+assetRoute.use("/etc", static(join(__dirname, "/etc")));
+assetRoute.use("/js", static(join(__dirname, "/js")));
 
 module.exports = assetRoute;
